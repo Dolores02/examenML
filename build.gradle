@@ -4,7 +4,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.6'
 }
 
-group = 'com.example'
+group = 'org.demo'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -26,23 +26,19 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation:3.3.4'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	implementation 'jakarta.validation:jakarta.validation-api:3.0.0'
-	implementation 'org.hibernate.validator:hibernate-validator:6.2.0.Final'
-	implementation 'org.glassfish:javax.el:3.0.0'
-
-
-
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
 bootJar {
 	enabled = true
 }
