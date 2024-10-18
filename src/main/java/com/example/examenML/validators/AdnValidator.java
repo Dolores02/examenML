@@ -1,20 +1,15 @@
 package com.example.examenML.validators;
 
-import com.example.examenML.dto.AdnRequest;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-import java.util.Arrays;
-
-public class AdnValidator implements ConstraintValidator<ValidDna, AdnRequest> {
+public class AdnValidator implements ConstraintValidator<ValidDna, String[]> {
 
     @Override
-    public boolean isValid(AdnRequest adnRequest, ConstraintValidatorContext context) {
-        if (adnRequest == null || adnRequest.getDna() == null) {
+    public boolean isValid(String[] dna, ConstraintValidatorContext context) {
+        if (dna == null) {
             return false; // El ADN no debe ser nulo
         }
-
-        String[] dna = adnRequest.getDna();
 
         // Validar la longitud de las secuencias
         int length = dna.length;
