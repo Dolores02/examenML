@@ -136,6 +136,6 @@ public class AdnService {
         boolean isMutant = isMutant(dna);
         Adn adnEntity = Adn.builder().dna(dnaSequence).isMutant(isMutant).build();
         adnRepository.save(adnEntity); // Guardo en la base de datos
-        return isMutant(dna);
+        return isMutant;
     }
 }
