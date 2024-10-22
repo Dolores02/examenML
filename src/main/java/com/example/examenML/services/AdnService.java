@@ -17,7 +17,7 @@ public class AdnService {
         this.adnRepository = adnRepository;
     }
 
-    public static boolean isMutant(String[] dna) {
+    public  boolean isMutant(String[] dna) {
         int n = dna.length;
         int contadorsecuencia = 0;
 

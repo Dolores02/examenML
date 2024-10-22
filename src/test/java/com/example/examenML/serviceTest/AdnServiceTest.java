@@ -1,14 +1,16 @@
 package com.example.examenML.serviceTest;
 
-import com.example.examenML.entities.Adn;
 import com.example.examenML.services.AdnService;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AdnServiceTest {
 
+    @Autowired
+    AdnService adnService;
     @Test
     public void testMutant1() {
         String[] dna = {
@@ -17,7 +19,7 @@ public class AdnServiceTest {
                 "TCAG",
                 "GGTC"
         };
-        assertTrue(AdnService.isMutant(dna));
+        assertTrue(adnService.isMutant(dna));
     }
 
     @Test
@@ -28,7 +30,7 @@ public class AdnServiceTest {
                 "AAAC",
                 "CGGG"
         };
-        assertFalse(AdnService.isMutant(dna));
+        assertFalse(adnService.isMutant(dna));
     }
 
     @Test
@@ -39,7 +41,7 @@ public class AdnServiceTest {
                 "TGAC",
                 "GGTC"
         };
-        assertTrue(AdnService.isMutant(dna));
+        assertTrue(adnService.isMutant(dna));
     }
 
     @Test
@@ -50,7 +52,7 @@ public class AdnServiceTest {
                 "AAAA",
                 "AAAA"
         };
-        assertTrue(AdnService.isMutant(dna));
+        assertTrue(adnService.isMutant(dna));
     }
 
     @Test
@@ -61,7 +63,7 @@ public class AdnServiceTest {
                 "TAAG",
                 "GGTC"
         };
-        assertFalse(AdnService.isMutant(dna));
+        assertFalse(adnService.isMutant(dna));
     }
 
     @Test
@@ -77,7 +79,7 @@ public class AdnServiceTest {
                 "ACTACGACC",
                 "TGAGTATCC"
         };
-        assertTrue(AdnService.isMutant(dna));
+        assertTrue(adnService.isMutant(dna));
     }
 
     @Test
@@ -93,6 +95,6 @@ public class AdnServiceTest {
                 "CAAAGGCAT",
                 "GCAGTCCCC"
         };
-        assertTrue(AdnService.isMutant(dna));
+        assertTrue(adnService.isMutant(dna));
     }
 }
