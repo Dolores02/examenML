@@ -1,6 +1,8 @@
 # ExamenML: Detección de Mutantes en Secuencias de ADN
 
 Este proyecto es una API para detectar mutantes basada en la secuencia de ADN de un individuo. La API recibe secuencias de ADN y determina si pertenecen a un mutante o no, siguiendo ciertos patrones genéticos. El proyecto ha sido desarrollado en el contexto de un examen de MercadoLibre.
+**Desarrollado por**: Dolores Videla (LEGAJO: 50198)
+
 
 ## Requisitos
 
